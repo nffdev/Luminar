@@ -133,3 +133,11 @@ Provides terminal access to the target system with full command execution capabi
 
 ### Audio Player
 - Play audio files on the target system
+
+### Remote Interaction
+- Show/Hide Taskbar
+- Show/Hide Desktop
+- Show/Hide Clock
+- Swap/Restore Mouse Buttons
+- Shake Window: Continuously move all windows
+- Slider: Transform screen into puzzle that must be solved
