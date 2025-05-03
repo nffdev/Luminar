@@ -44,6 +44,65 @@ graph TD
     H --> I[Persistence Established]
 ```
 
+### Advanced Technical Deployment Flow
+
+The following diagram illustrates the detailed technical implementation of Luminar's deployment process:
+
+```mermaid
+graph TD
+    subgraph "Shellcode Installer"
+        A1[Find offset to client.exe] --> A2[Process Hollowing]
+        A2 --> A3[Memory Injection]
+    end
+    
+    A3 --> B1
+    
+    subgraph "Installer"
+        B1[Write stager.exe to registry] --> B2[Create Windows service]
+        B2 --> B3[Launch powershell.exe]
+    end
+    
+    B3 --> C1
+    
+    subgraph "PowerShell"
+        C1[AMSI bypass] --> C2[Invoke stager.exe reflectively]
+        C2 --> C3[Memory Evasion Techniques]
+    end
+    
+    C3 --> D1
+    
+    subgraph "Stager"
+        D1[Unhook ntdll & kernel32.dll] --> D2[Load & decrypt Service EXE]
+        D2 --> D3[Reflectively inject Service EXE]
+        D3 --> D4[ETW & Event Log Bypass]
+    end
+    
+    D4 --> E1
+    
+    subgraph "Luminar Service"
+        E1[Unhook ntdll & kernel32.dll] --> E2[Initialize Luminar services]
+        E2 --> E3[Inject all processes]
+        E3 --> E4[Establish C2 Communication]
+    end
+    
+    E4 --> F1
+    
+    subgraph "Rootkit"
+        F1[Hook Windows APIs] --> F2[Hook child processes]
+        F2 --> F3[Implement DKOM techniques]
+        F3 --> F4[Patch in-memory structures]
+    end
+    
+    subgraph "Persistence"
+        F4 --> G1[Bootloader Modification]
+        G1 --> G2[Registry Implants]
+        G2 --> G3[WMI Event Subscription]
+        G3 --> G4[Driver Loading at Boot]
+    end
+```
+
+This advanced deployment flow demonstrates the sophisticated techniques used by Luminar to establish persistence while evading detection:
+
 ## Environment Detection
 
 During its initial execution, Luminar performs a series of checks to determine if it's running in a virtual environment (sandbox, virtual machine) or on a real physical system.
