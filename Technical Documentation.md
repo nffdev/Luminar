@@ -47,3 +47,27 @@ graph TD
 ## Environment Detection
 
 During its initial execution, Luminar performs a series of checks to determine if it's running in a virtual environment (sandbox, virtual machine) or on a real physical system.
+
+### VM Detection Techniques
+
+```csharp
+public static bool IsVirtualMachine()
+{
+    // Check hardware signatures
+    if (CheckVMHardwareSignatures())
+        return true;
+        
+    // Check for known VM artifacts
+    if (CheckVMDrivers() || CheckVMServices())
+        return true;
+        
+    
+    // Timing analysis (VMs have different timing characteristics)
+    if (PerformTimingAnalysis())
+        return true;
+        
+    return false;
+}
+```
+
+If a virtual machine is detected, Luminar adopts legitimate behavior to avoid detection, acting as a standard application without deploying its malicious components.
