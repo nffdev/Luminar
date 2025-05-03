@@ -427,3 +427,5 @@ Luminar implements techniques to avoid common detection signatures used by antiv
 ---
 
 *This documentation is confidential and intended only for authorized developers of the Luminar project. Any unauthorized distribution is strictly prohibited.*
+
+*Remember some examples are not complete and are only for educational purposes.*
