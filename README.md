@@ -180,3 +180,8 @@ Provides terminal access to the target system with full command execution capabi
 - NordVPN
 - OpenVPN
 - ProtonVPN
+
+### Injections
+- Discord
+- Exodus
+- Metamask (Coming Soon)
