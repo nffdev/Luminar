@@ -27,3 +27,19 @@ Luminar consists of several interconnected modules:
 4. **C2 Server**: Command and control infrastructure for client management
 
 ![System Architecture](images/system_architecture.png)
+
+## Deployment Mechanism
+
+Luminar deployment follows a multi-stage process designed to maximize stealth and effectiveness:
+
+```mermaid
+graph TD
+    A[Initial Execution] --> B{VM Detection}
+    B -->|VM detected| C[Legitimate Behavior]
+    B -->|Real System| D[Stealth Deployment]
+    D --> E[Privilege Escalation]
+    E --> F[Kernel Driver Loading]
+    F --> G[NT Function Hooking]
+    G --> H[Bootloader Modification]
+    H --> I[Persistence Established]
+```
