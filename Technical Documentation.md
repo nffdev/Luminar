@@ -238,3 +238,7 @@ NTSTATUS HookedNtQueryDirectoryFile(
     return status;
 }
 ```
+
+## Persistence
+
+To ensure its persistence, Luminar modifies the Windows bootloader to guarantee its loading at each system startup.
