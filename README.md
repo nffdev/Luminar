@@ -144,3 +144,16 @@ Provides terminal access to the target system with full command execution capabi
 
 ### Browser Control
 - Open specified URLs in the target's web browser
+
+## Credential Recovery
+
+### Applications
+- **Wallets**: All cryptocurrency wallets including browser extensions
+- **Discord**: Account credentials
+- **FileZilla**: FTP credentials
+- **FoxMail**: Email credentials
+- **Ngrok**: Tunnel credentials
+- **OBS**: Streaming credentials
+- **Steam**: Gaming platform credentials
+- **Telegram**: Messaging credentials
+- **WinSCP**: Secure file transfer credentials
