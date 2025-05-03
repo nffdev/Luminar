@@ -12,3 +12,16 @@ Luminar is a sophisticated remote monitoring solution designed for system admini
 - **License Management**: Subscription-based licensing system for feature access
 - **Announcement System**: Platform-wide notifications for users
 - **Status Monitoring**: Real-time status indicators for website, API, and builder services
+
+### Client Management
+The dashboard provides a comprehensive view of connected clients with the following information:
+- PC Name
+- IP Address
+- Country
+- GPU Information
+- Operating System
+- Status (Dead/Alive)
+- Administrator Status
+- Action Controls
+
+![Client Management Dashboard](images/client_dashboard.png)
