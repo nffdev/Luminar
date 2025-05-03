@@ -112,3 +112,8 @@ The system manager provides control over the target system:
 ## Remote Shells
 
 Provides terminal access to the target system with full command execution capabilities.
+
+## Surveillance Tools
+
+- **KeyLogger**: Record and log keystrokes
+- **Ransomware**: Encryption tool with logging capabilities
