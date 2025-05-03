@@ -161,3 +161,10 @@ Provides terminal access to the target system with full command execution capabi
 ### Browsers
 - All Chromium-based browsers
 - All Gecko-based browsers
+
+### Games
+- Epic Games
+- Minecraft
+- Riot Games
+- Uplay
+- Nations Glory
