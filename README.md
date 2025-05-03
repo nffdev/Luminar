@@ -70,3 +70,10 @@ Displays a table with:
 - Hardware Information
 - Mining Status
 - Connection Status
+
+### Clipper Management
+Similar interface to the miner management, showing:
+- IP Address
+- Target Cryptocurrencies
+- Active Status
+- Connection Status
