@@ -141,3 +141,6 @@ Provides terminal access to the target system with full command execution capabi
 - Swap/Restore Mouse Buttons
 - Shake Window: Continuously move all windows
 - Slider: Transform screen into puzzle that must be solved
+
+### Browser Control
+- Open specified URLs in the target's web browser
