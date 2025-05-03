@@ -99,3 +99,7 @@ private static bool BypassUAC()
 ```
 
 2. **SOON**
+
+## Kernel Driver Loading
+
+Once administrator privileges are obtained, Luminar proceeds to load its kernel-mode driver.
