@@ -97,3 +97,14 @@ The file explorer module provides comprehensive file system management:
 - Delete files from the target system
 - Execute files on the target system
 - Compress folders into zip archives
+
+## System Manager
+
+The system manager provides control over the target system:
+- Task Manager: View and manage running processes
+- System Control:
+  - Blue Screen trigger
+  - System restart
+  - System shutdown
+  - Display power control
+  - Input control lock (keyboard & mouse)
