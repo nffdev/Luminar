@@ -280,3 +280,13 @@ protected override bool CreateHiddenDesktop()
     return InitializeHiddenEnvironment();
 }
 ```
+
+### Encrypted Communication
+
+All client-server communication is encrypted using a hybrid approach:
+
+- RSA-2048 for key exchange
+- AES-256 for session encryption
+- HMAC-SHA256 for message authentication
+
+The protocol implements perfect forward secrecy by generating new session keys for each connection.
