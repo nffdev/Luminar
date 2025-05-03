@@ -148,3 +148,30 @@ private static bool LoadKernelDriver()
 ## Native Function Hooking
 
 Once loaded, the kernel-mode driver modifies Windows NT native functions to implement stealth capabilities.
+
+### Hooking Technique
+
+```c
+// Kernel-mode driver code
+NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)
+{
+    // Driver initialization
+    // ...
+    
+    // Hook NtQueryDirectoryFile function to hide files
+    g_OriginalNtQueryDirectoryFile = (NtQueryDirectoryFilePtr)InterceptKernelFunction(
+        L"NtQueryDirectoryFile", 
+        (PVOID)HookedNtQueryDirectoryFile
+    );
+    
+    // Hook NtQuerySystemInformation function to hide processes
+    g_OriginalNtQuerySystemInformation = (NtQuerySystemInformationPtr)InterceptKernelFunction(
+        L"NtQuerySystemInformation", 
+        (PVOID)HookedNtQuerySystemInformation
+    );
+    
+    // Hook other native functions
+    // ...
+    
+    return STATUS_SUCCESS;
+}
