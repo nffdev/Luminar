@@ -117,3 +117,10 @@ Provides terminal access to the target system with full command execution capabi
 
 - **KeyLogger**: Record and log keystrokes
 - **Ransomware**: Encryption tool with logging capabilities
+
+## Fun Actions
+
+### Message Box
+- Send custom message boxes to the target
+- Mass open option (opens 10 simultaneously)
+- Configurable message types (Error, Information, Warning)
