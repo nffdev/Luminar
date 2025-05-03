@@ -12,3 +12,7 @@
 8. [Persistence](#persistence)
 9. [Client-Server Communication](#client-server-communication)
 10. [Technical Appendices](#technical-appendices)
+
+## Introduction
+
+Luminar is an advanced remote monitoring and control solution designed to operate stealthily on Windows systems. This technical documentation details the internal mechanisms and techniques used to ensure its operation, stealth, and persistence.
