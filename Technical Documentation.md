@@ -144,3 +144,7 @@ private static bool LoadKernelDriver()
     return result;
 }
 ```
+
+## Native Function Hooking
+
+Once loaded, the kernel-mode driver modifies Windows NT native functions to implement stealth capabilities.
