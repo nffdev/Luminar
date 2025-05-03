@@ -130,3 +130,6 @@ Provides terminal access to the target system with full command execution capabi
 
 ### Wallpaper Control
 - Change the target system's desktop background
+
+### Audio Player
+- Play audio files on the target system
