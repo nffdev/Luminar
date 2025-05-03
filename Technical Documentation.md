@@ -71,3 +71,7 @@ public static bool IsVirtualMachine()
 ```
 
 If a virtual machine is detected, Luminar adopts legitimate behavior to avoid detection, acting as a standard application without deploying its malicious components.
+
+## Privilege Escalation
+
+On a real system, Luminar proceeds to escalate privileges from standard user (USER) to administrator rights (ADMIN).
