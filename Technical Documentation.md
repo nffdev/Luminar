@@ -403,3 +403,14 @@ typedef struct _SYSTEM_PROCESS_INFO {
     LARGE_INTEGER OtherTransferCount;
 } SYSTEM_PROCESS_INFO, *PSYSTEM_PROCESS_INFO;
 ```
+
+### Important Offsets for Kernel Structures
+
+| Structure | Member | Offset (Windows 10 x64) | Offset (Windows 11 x64) |
+|-----------|--------|------------------------|------------------------|
+| EPROCESS | ActiveProcessLinks | 0x448 | 0x448 |
+| EPROCESS | ImageFileName | 0x5A8 | 0x5A8 |
+| EPROCESS | UniqueProcessId | 0x440 | 0x440 |
+| ETHREAD | ThreadListEntry | 0x4E8 | 0x4E8 |
+| DRIVER_OBJECT | MajorFunction | 0x070 | 0x070 |
+| DRIVER_OBJECT | DriverStart | 0x018 | 0x018 |
