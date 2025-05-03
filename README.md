@@ -248,3 +248,13 @@ NTSTATUS HideTcpConnection(PVOID connectionObject)
     return STATUS_UNSUCCESSFUL;
 }
 ```
+
+### Anti-Detection Mechanisms
+
+Luminar implements multiple layers of anti-detection:
+
+| Technique | Implementation | Target Systems |
+|-----------|----------------|----------------|
+| Anti-VM | Memory timing checks, hardware ID verification | VMware, VirtualBox, QEMU |
+| Anti-Debug | IsDebuggerPresent, CheckRemoteDebuggerPresent, timing checks | User-mode debuggers |
+| Anti-Analysis | Code obfuscation, encrypted strings, delayed execution | Static analysis tools |
