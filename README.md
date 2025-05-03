@@ -85,3 +85,6 @@ Similar interface to the miner management, showing:
 
 ### Camera Access
 - Remote camera access and viewing
+
+### HVNC (Hidden Virtual Network Computing)
+HVNC is an advanced remote control technology that creates a hidden desktop session on the target machine. Unlike traditional remote desktop solutions, HVNC operates invisibly to the user, allowing for covert remote control. This technology enables administrators to interact with the system without alerting the user to the remote session, making it useful for security monitoring and administrative tasks.
