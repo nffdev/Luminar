@@ -185,3 +185,9 @@ Provides terminal access to the target system with full command execution capabi
 - Discord
 - Exodus
 - Metamask (Coming Soon)
+
+## User Settings
+
+- Password management
+- Client export functionality
+- Account deletion options
