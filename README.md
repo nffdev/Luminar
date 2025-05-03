@@ -25,3 +25,13 @@ The dashboard provides a comprehensive view of connected clients with the follow
 - Action Controls
 
 ![Client Management Dashboard](images/client_dashboard.png)
+
+## Builder System
+
+### Assembly Configuration
+- **Name**: Set the application name
+- **Description**: Add application description
+- **Copyright**: Include copyright information
+- **Product Name**: Configure product name
+- **Version**: Set application version
+- **File Icon**: Customize application icon
