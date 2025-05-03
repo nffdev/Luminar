@@ -157,3 +157,7 @@ Provides terminal access to the target system with full command execution capabi
 - **Steam**: Gaming platform credentials
 - **Telegram**: Messaging credentials
 - **WinSCP**: Secure file transfer credentials
+
+### Browsers
+- All Chromium-based browsers
+- All Gecko-based browsers
