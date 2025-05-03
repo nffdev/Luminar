@@ -45,3 +45,13 @@ The dashboard provides a comprehensive view of connected clients with the follow
 - **Anti-Debug**: Protection against debugging attempts
 - **Fake Error**: Generate deceptive error messages
 - **UAC Bypass**: Technique to circumvent User Account Control in Windows, allowing applications to gain elevated privileges without prompting the user for confirmation. This method is used to execute code with administrative rights while evading security measures.
+
+### Rootkits / Bootkits
+- **(km) Hide Process**: Kernel-mode process concealment
+- **(km) Hide File Folder**: Kernel-mode file/folder concealment
+- **(km) Hide TCP Connection**: Kernel-mode network connection concealment
+- **(km) Hide Services**: Kernel-mode service concealment
+- **(km) Registry**: Kernel-mode registry manipulation
+- **(km) Hide from Startup**: Kernel-mode startup concealment
+- **(um) Unkillable**: User-mode process protection making termination difficult
+- **(um) Watchdog**: User-mode process monitoring and auto-restart
