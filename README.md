@@ -58,3 +58,6 @@ The dashboard provides a comprehensive view of connected clients with the follow
 
 ### Tasks
 The builder allows configuration of automated tasks that execute based on specific conditions when the client is launched. These tasks can be scheduled to run at specific times, on specific events, or based on system conditions.
+
+### Clipper
+The clipper functionality monitors the clipboard for cryptocurrency wallet addresses. When a user copies a cryptocurrency address, the clipper replaces it with an alternative address specified by the administrator, redirecting transactions to the specified wallet.
