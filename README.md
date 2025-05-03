@@ -82,3 +82,6 @@ Similar interface to the miner management, showing:
 
 ### Screen Viewer
 - Real-time remote screen viewing
+
+### Camera Access
+- Remote camera access and viewing
