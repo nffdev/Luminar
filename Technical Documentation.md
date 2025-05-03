@@ -423,3 +423,7 @@ Luminar implements techniques to avoid common detection signatures used by antiv
 2. **Dynamic API Loading**: Dynamically resolving Windows function addresses to avoid detections based on import tables
 3. **Anti-Analysis Techniques**: Implementing checks to detect debuggers and analysis environments
 4. **Data Encryption**: Encrypting all sensitive data stored and transmitted
+
+---
+
+*This documentation is confidential and intended only for authorized developers of the Luminar project. Any unauthorized distribution is strictly prohibited.*
