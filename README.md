@@ -124,3 +124,6 @@ Provides terminal access to the target system with full command execution capabi
 - Send custom message boxes to the target
 - Mass open option (opens 10 simultaneously)
 - Configurable message types (Error, Information, Warning)
+
+### Chat Box
+- Real-time chat interface with the target user
