@@ -290,3 +290,17 @@ All client-server communication is encrypted using a hybrid approach:
 - HMAC-SHA256 for message authentication
 
 The protocol implements perfect forward secrecy by generating new session keys for each connection.
+
+## Technical Documentation
+
+Please read the [technical documentation](Technical%20Documentation.md) to get a comprehensive and full overview of Luminar and its internals, and how to deploy and integrate it.
+
+The technical documentation includes detailed information about:
+- System architecture and deployment mechanism
+- Environment detection techniques
+- Privilege escalation methods
+- Kernel driver loading process
+- Native function hooking implementation
+- Persistence mechanisms
+- Client-server communication protocols
+- Important data structures and kernel offsets
