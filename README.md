@@ -77,3 +77,8 @@ Similar interface to the miner management, showing:
 - Target Cryptocurrencies
 - Active Status
 - Connection Status
+
+## Remote Viewing
+
+### Screen Viewer
+- Real-time remote screen viewing
