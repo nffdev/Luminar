@@ -88,3 +88,12 @@ Similar interface to the miner management, showing:
 
 ### HVNC (Hidden Virtual Network Computing)
 HVNC is an advanced remote control technology that creates a hidden desktop session on the target machine. Unlike traditional remote desktop solutions, HVNC operates invisibly to the user, allowing for covert remote control. This technology enables administrators to interact with the system without alerting the user to the remote session, making it useful for security monitoring and administrative tasks.
+
+## File Explorer
+
+The file explorer module provides comprehensive file system management:
+- Browse files and directories
+- Upload files to the target system
+- Delete files from the target system
+- Execute files on the target system
+- Compress folders into zip archives
