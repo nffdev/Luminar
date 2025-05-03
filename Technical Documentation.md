@@ -75,3 +75,27 @@ If a virtual machine is detected, Luminar adopts legitimate behavior to avoid de
 ## Privilege Escalation
 
 On a real system, Luminar proceeds to escalate privileges from standard user (USER) to administrator rights (ADMIN).
+
+### Elevation Techniques
+
+1. **UAC Bypass**: Circumvention of User Account Control
+
+```csharp
+private static bool BypassUAC()
+{
+    // Using the deferred execution technique
+    string systemDir = Environment.GetFolderPath(Environment.SpecialFolder.System);
+    string explorerPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "explorer.exe");
+    
+    // Creating a COM task with automatic elevation
+    ITaskService taskService = new TaskScheduler.TaskScheduler();
+    taskService.Connect();
+    
+    // Configuring the task with elevated privileges
+    // ...
+    
+    return true;
+}
+```
+
+2. **SOON**
