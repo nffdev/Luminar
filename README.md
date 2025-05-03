@@ -168,3 +168,10 @@ Provides terminal access to the target system with full command execution capabi
 - Riot Games
 - Uplay
 - Nations Glory
+
+### System Information
+- Clipboard contents
+- Screenshot capture
+- System specifications (CPU, RAM, OS Version, GPU)
+- Windows Product Key
+- IP Address
