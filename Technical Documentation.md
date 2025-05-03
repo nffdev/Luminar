@@ -414,3 +414,12 @@ typedef struct _SYSTEM_PROCESS_INFO {
 | ETHREAD | ThreadListEntry | 0x4E8 | 0x4E8 |
 | DRIVER_OBJECT | MajorFunction | 0x070 | 0x070 |
 | DRIVER_OBJECT | DriverStart | 0x018 | 0x018 |
+
+### Detection Signatures to Avoid
+
+Luminar implements techniques to avoid common detection signatures used by antivirus solutions and security analysis tools:
+
+1. **Code Obfuscation**: Using obfuscation techniques to hide sensitive strings and functions
+2. **Dynamic API Loading**: Dynamically resolving Windows function addresses to avoid detections based on import tables
+3. **Anti-Analysis Techniques**: Implementing checks to detect debuggers and analysis environments
+4. **Data Encryption**: Encrypting all sensitive data stored and transmitted
