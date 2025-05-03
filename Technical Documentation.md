@@ -43,3 +43,7 @@ graph TD
     G --> H[Bootloader Modification]
     H --> I[Persistence Established]
 ```
+
+## Environment Detection
+
+During its initial execution, Luminar performs a series of checks to determine if it's running in a virtual environment (sandbox, virtual machine) or on a real physical system.
