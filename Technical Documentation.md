@@ -301,3 +301,9 @@ BOOL ModifyWindowsBootloader()
 ```
 
 The modified bootloader contains code that automatically downloads and executes the Luminar executable during system startup, thus ensuring its persistence even if the original file is deleted.
+
+## Client-Server Communication
+
+Luminar uses an encrypted communication protocol to exchange data with its command and control (C2) server.
+
+*I'm currently working on a new version of the client-server communication that makes it totally undetectable.*
