@@ -127,3 +127,6 @@ Provides terminal access to the target system with full command execution capabi
 
 ### Chat Box
 - Real-time chat interface with the target user
+
+### Wallpaper Control
+- Change the target system's desktop background
