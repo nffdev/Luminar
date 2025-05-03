@@ -55,3 +55,6 @@ The dashboard provides a comprehensive view of connected clients with the follow
 - **(km) Hide from Startup**: Kernel-mode startup concealment
 - **(um) Unkillable**: User-mode process protection making termination difficult
 - **(um) Watchdog**: User-mode process monitoring and auto-restart
+
+### Tasks
+The builder allows configuration of automated tasks that execute based on specific conditions when the client is launched. These tasks can be scheduled to run at specific times, on specific events, or based on system conditions.
