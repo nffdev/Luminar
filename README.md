@@ -61,3 +61,12 @@ The builder allows configuration of automated tasks that execute based on specif
 
 ### Clipper
 The clipper functionality monitors the clipboard for cryptocurrency wallet addresses. When a user copies a cryptocurrency address, the clipper replaces it with an alternative address specified by the administrator, redirecting transactions to the specified wallet.
+
+## Cryptocurrency Tools
+
+### Miner Management
+Displays a table with:
+- IP Address
+- Hardware Information
+- Mining Status
+- Connection Status
