@@ -175,3 +175,8 @@ Provides terminal access to the target system with full command execution capabi
 - System specifications (CPU, RAM, OS Version, GPU)
 - Windows Product Key
 - IP Address
+
+### VPN Services
+- NordVPN
+- OpenVPN
+- ProtonVPN
