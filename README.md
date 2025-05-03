@@ -108,3 +108,7 @@ The system manager provides control over the target system:
   - System shutdown
   - Display power control
   - Input control lock (keyboard & mouse)
+
+## Remote Shells
+
+Provides terminal access to the target system with full command execution capabilities.
