@@ -35,3 +35,13 @@ The dashboard provides a comprehensive view of connected clients with the follow
 - **Product Name**: Configure product name
 - **Version**: Set application version
 - **File Icon**: Customize application icon
+
+### Additional Options
+- **Binder**: Combine multiple files into one executable
+- **Binder Path**: Specify path for binding
+- **Run as Admin**: Execute with administrative privileges
+- **Run at Startup**: Launch application on system boot
+- **Anti-VM**: Detection and prevention of virtual machine environments
+- **Anti-Debug**: Protection against debugging attempts
+- **Fake Error**: Generate deceptive error messages
+- **UAC Bypass**: Technique to circumvent User Account Control in Windows, allowing applications to gain elevated privileges without prompting the user for confirmation. This method is used to execute code with administrative rights while evading security measures.
