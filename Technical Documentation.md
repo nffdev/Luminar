@@ -16,3 +16,14 @@
 ## Introduction
 
 Luminar is an advanced remote monitoring and control solution designed to operate stealthily on Windows systems. This technical documentation details the internal mechanisms and techniques used to ensure its operation, stealth, and persistence.
+
+## System Architecture
+
+Luminar consists of several interconnected modules:
+
+1. **Client Module**: Main executable deployed on the target system
+2. **Kernel Module**: Kernel-mode driver for low-level operations
+3. **Persistence Module**: Component that modifies the bootloader to ensure persistence
+4. **C2 Server**: Command and control infrastructure for client management
+
+![System Architecture](images/system_architecture.png)
