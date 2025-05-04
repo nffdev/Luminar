@@ -1,11 +1,11 @@
-# Luminar - Advanced Monitoring Solution 🚀
+🚀 # Luminar - Advanced Monitoring Solution
 
-## Overview 📝
+📝 ## Overview
 Luminar is a sophisticated remote monitoring solution designed for system administrators and security professionals. This tool provides comprehensive remote system management capabilities with an intuitive dashboard interface.
 
 **Note**: This is a private project and not intended for open-source distribution.
 
-## Dashboard Features 📊
+📊 ## Dashboard Features
 
 ### Authentication & Management 🔐
 - **Login & Registration System**: Secure authentication system for authorized access
@@ -26,7 +26,7 @@ The dashboard provides a comprehensive view of connected clients with the follow
 
 ![Client Management Dashboard](images/client_dashboard.png)
 
-## Builder System 🛠️
+🛠️ ## Builder System
 
 ### Assembly Configuration ⚙️
 - **Name**: Set the application name
@@ -62,7 +62,7 @@ The builder allows configuration of automated tasks that execute based on specif
 ### Clipper
 The clipper functionality monitors the clipboard for cryptocurrency wallet addresses. When a user copies a cryptocurrency address, the clipper replaces it with an alternative address specified by the administrator, redirecting transactions to the specified wallet.
 
-## Cryptocurrency Tools 💰
+💰 ## Cryptocurrency Tools
 
 ### Miner Management ⛏️
 Displays a table with:
@@ -78,7 +78,7 @@ Similar interface to the miner management, showing:
 - Active Status
 - Connection Status
 
-## Remote Viewing 👁️
+👁️ ## Remote Viewing
 
 ### Screen Viewer 🖼️
 - Real-time remote screen viewing
@@ -89,7 +89,7 @@ Similar interface to the miner management, showing:
 ### HVNC (Hidden Virtual Network Computing) 🖥️👻
 HVNC is an advanced remote control technology that creates a hidden desktop session on the target machine. Unlike traditional remote desktop solutions, HVNC operates invisibly to the user, allowing for covert remote control. This technology enables administrators to interact with the system without alerting the user to the remote session, making it useful for security monitoring and administrative tasks.
 
-## File Explorer 📁
+📁 ## File Explorer
 
 The file explorer module provides comprehensive file system management:
 - Browse files and directories
@@ -98,7 +98,7 @@ The file explorer module provides comprehensive file system management:
 - Execute files on the target system
 - Compress folders into zip archives
 
-## System Manager 🖥️
+🖥️ ## System Manager
 
 The system manager provides control over the target system:
 - Task Manager: View and manage running processes
@@ -109,16 +109,16 @@ The system manager provides control over the target system:
   - Display power control
   - Input control lock (keyboard & mouse)
 
-## Remote Shells 💻
+💻 ## Remote Shells
 
 Provides terminal access to the target system with full command execution capabilities.
 
-## Surveillance Tools 🕵️
+🕵️ ## Surveillance Tools
 
 - **KeyLogger**: Record and log keystrokes
 - **Ransomware**: Encryption tool with logging capabilities
 
-## Fun Actions 🎉
+🎉 ## Fun Actions
 
 ### Message Box 💬
 - Send custom message boxes to the target
@@ -145,7 +145,7 @@ Provides terminal access to the target system with full command execution capabi
 ### Browser Control 🌐
 - Open specified URLs in the target's web browser
 
-## Credential Recovery 🔑
+🔑 ## Credential Recovery
 
 ### Applications 📦
 - **Wallets**: All cryptocurrency wallets including browser extensions
@@ -186,13 +186,13 @@ Provides terminal access to the target system with full command execution capabi
 - Exodus
 - Metamask (Coming Soon)
 
-## User Settings ⚙️
+⚙️ ## User Settings
 
 - Password management
 - Client export functionality
 - Account deletion options
 
-## Technical Details 🛠️
+🛠️ ## Technical Details
 
 ### Process Manipulation 🔄
 
