@@ -1,6 +1,6 @@
-📚 # Luminar - Technical Documentation
+# 📚 Luminar - Technical Documentation
 
-🗂️ ## Table of Contents
+## 🗂️ Table of Contents
 
 1. [Introduction](#introduction)
 2. [System Architecture](#system-architecture)
@@ -13,11 +13,11 @@
 9. [Client-Server Communication](#client-server-communication)
 10. [Technical Appendices](#technical-appendices)
 
-📝 ## Introduction
+## 📝 Introduction
 
 Luminar is an advanced remote monitoring and control solution designed to operate stealthily on Windows systems. This technical documentation details the internal mechanisms and techniques used to ensure its operation, stealth, and persistence.
 
-🏗️ ## System Architecture
+## 🏗️ System Architecture
 
 Luminar consists of several interconnected modules:
 
@@ -28,7 +28,7 @@ Luminar consists of several interconnected modules:
 
 ![System Architecture](images/system_architecture.png)
 
-🚀 ## Deployment Mechanism
+## 🚀 Deployment Mechanism
 
 Luminar deployment follows a multi-stage process designed to maximize stealth and effectiveness:
 
@@ -103,7 +103,7 @@ graph TD
 
 This advanced deployment flow demonstrates the sophisticated techniques used by Luminar to establish persistence while evading detection:
 
-🕵️ ## Environment Detection
+## 🕵️ Environment Detection
 
 During its initial execution, Luminar performs a series of checks to determine if it's running in a virtual environment (sandbox, virtual machine) or on a real physical system.
 
@@ -131,7 +131,7 @@ public static bool IsVirtualMachine()
 
 If a virtual machine is detected, Luminar adopts legitimate behavior to avoid detection, acting as a standard application without deploying its malicious components.
 
-🔓 ## Privilege Escalation
+## 🔓 Privilege Escalation
 
 On a real system, Luminar proceeds to escalate privileges from standard user (USER) to administrator rights (ADMIN).
 
@@ -159,7 +159,7 @@ private static bool BypassUAC()
 
 2. **SOON**
 
-🧬 ## Kernel Driver Loading
+## 🧬 Kernel Driver Loading
 
 Once administrator privileges are obtained, Luminar proceeds to load its kernel-mode driver.
 
@@ -204,7 +204,7 @@ private static bool LoadKernelDriver()
 }
 ```
 
-🪝 ## Native Function Hooking
+## 🪝 Native Function Hooking
 
 Once loaded, the kernel-mode driver modifies Windows NT native functions to implement stealth capabilities.
 
@@ -298,7 +298,7 @@ NTSTATUS HookedNtQueryDirectoryFile(
 }
 ```
 
-♻️ ## Persistence
+## ♻️ Persistence
 
 To ensure its persistence, Luminar modifies the Windows bootloader to guarantee its loading at each system startup.
 
@@ -361,7 +361,7 @@ BOOL ModifyWindowsBootloader()
 
 The modified bootloader contains code that automatically downloads and executes the Luminar executable during system startup, thus ensuring its persistence even if the original file is deleted.
 
-🌐 ## Client-Server Communication
+## 🌐 Client-Server Communication
 
 Luminar uses an encrypted communication protocol to exchange data with its command and control (C2) server.
 
@@ -419,7 +419,7 @@ private static bool SendDataToC2(byte[] encryptedData)
 }
 ```
 
-📑 ## Technical Appendices
+## 📑 Technical Appendices
 
 ### Important Data Structures 🏷️
 
