@@ -1,6 +1,6 @@
-# Luminar - Technical Documentation
+# Luminar - Technical Documentation 📚
 
-## Table of Contents
+## Table of Contents 🗂️
 
 1. [Introduction](#introduction)
 2. [System Architecture](#system-architecture)
@@ -13,11 +13,11 @@
 9. [Client-Server Communication](#client-server-communication)
 10. [Technical Appendices](#technical-appendices)
 
-## Introduction
+## Introduction 📝
 
 Luminar is an advanced remote monitoring and control solution designed to operate stealthily on Windows systems. This technical documentation details the internal mechanisms and techniques used to ensure its operation, stealth, and persistence.
 
-## System Architecture
+## System Architecture 🏗️
 
 Luminar consists of several interconnected modules:
 
@@ -28,7 +28,7 @@ Luminar consists of several interconnected modules:
 
 ![System Architecture](images/system_architecture.png)
 
-## Deployment Mechanism
+## Deployment Mechanism 🚀
 
 Luminar deployment follows a multi-stage process designed to maximize stealth and effectiveness:
 
@@ -44,7 +44,7 @@ graph TD
     H --> I[Persistence Established]
 ```
 
-### Advanced Technical Deployment Flow
+### Advanced Technical Deployment Flow 🔬
 
 The following diagram illustrates the detailed technical implementation of Luminar's deployment process:
 
@@ -103,11 +103,11 @@ graph TD
 
 This advanced deployment flow demonstrates the sophisticated techniques used by Luminar to establish persistence while evading detection:
 
-## Environment Detection
+## Environment Detection 🕵️
 
 During its initial execution, Luminar performs a series of checks to determine if it's running in a virtual environment (sandbox, virtual machine) or on a real physical system.
 
-### VM Detection Techniques
+### VM Detection Techniques 💻
 
 ```csharp
 public static bool IsVirtualMachine()
@@ -131,11 +131,11 @@ public static bool IsVirtualMachine()
 
 If a virtual machine is detected, Luminar adopts legitimate behavior to avoid detection, acting as a standard application without deploying its malicious components.
 
-## Privilege Escalation
+## Privilege Escalation 🔓
 
 On a real system, Luminar proceeds to escalate privileges from standard user (USER) to administrator rights (ADMIN).
 
-### Elevation Techniques
+### Elevation Techniques 🪜
 
 1. **UAC Bypass**: Circumvention of User Account Control
 
@@ -159,11 +159,11 @@ private static bool BypassUAC()
 
 2. **SOON**
 
-## Kernel Driver Loading
+## Kernel Driver Loading 🧬
 
 Once administrator privileges are obtained, Luminar proceeds to load its kernel-mode driver.
 
-### Driver Loading Process
+### Driver Loading Process ⚙️
 
 ```csharp
 private static bool LoadKernelDriver()
@@ -204,11 +204,11 @@ private static bool LoadKernelDriver()
 }
 ```
 
-## Native Function Hooking
+## Native Function Hooking 🪝
 
 Once loaded, the kernel-mode driver modifies Windows NT native functions to implement stealth capabilities.
 
-### Hooking Technique
+### Hooking Technique 🧲
 
 ```c
 // Kernel-mode driver code
@@ -298,11 +298,11 @@ NTSTATUS HookedNtQueryDirectoryFile(
 }
 ```
 
-## Persistence
+## Persistence ♻️
 
 To ensure its persistence, Luminar modifies the Windows bootloader to guarantee its loading at each system startup.
 
-### Bootloader Modification
+### Bootloader Modification 💾
 
 ```c
 BOOL ModifyWindowsBootloader()
@@ -361,13 +361,13 @@ BOOL ModifyWindowsBootloader()
 
 The modified bootloader contains code that automatically downloads and executes the Luminar executable during system startup, thus ensuring its persistence even if the original file is deleted.
 
-## Client-Server Communication
+## Client-Server Communication 🌐
 
 Luminar uses an encrypted communication protocol to exchange data with its command and control (C2) server.
 
 *I'm currently working on a new version of the client-server communication that makes it totally undetectable.*
 
-### Communication Protocol
+### Communication Protocol 🔐
 
 ```csharp
 private static byte[] EncryptCommunication(byte[] data, byte[] sessionKey)
@@ -419,9 +419,9 @@ private static bool SendDataToC2(byte[] encryptedData)
 }
 ```
 
-## Technical Appendices
+## Technical Appendices 📑
 
-### Important Data Structures
+### Important Data Structures 🏷️
 
 ```c
 // Structure used for NtQuerySystemInformation hook
@@ -463,7 +463,7 @@ typedef struct _SYSTEM_PROCESS_INFO {
 } SYSTEM_PROCESS_INFO, *PSYSTEM_PROCESS_INFO;
 ```
 
-### Important Offsets for Kernel Structures
+### Important Offsets for Kernel Structures 📏
 
 | Structure | Member | Offset (Windows 10 x64) | Offset (Windows 11 x64) |
 |-----------|--------|------------------------|------------------------|
@@ -474,7 +474,7 @@ typedef struct _SYSTEM_PROCESS_INFO {
 | DRIVER_OBJECT | MajorFunction | 0x070 | 0x070 |
 | DRIVER_OBJECT | DriverStart | 0x018 | 0x018 |
 
-### Detection Signatures to Avoid
+### Detection Signatures to Avoid 🚫
 
 Luminar implements techniques to avoid common detection signatures used by antivirus solutions and security analysis tools:
 
