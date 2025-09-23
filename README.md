@@ -304,3 +304,5 @@ The technical documentation includes detailed information about:
 - Persistence mechanisms
 - Client-server communication protocols
 - Important data structures and kernel offsets
+
+## Git Book ➡️
