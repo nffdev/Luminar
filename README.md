@@ -97,7 +97,6 @@ Provides terminal access to the target system with full command execution capabi
 ## 🕵️ Surveillance Tools
 
 - **KeyLogger**: Record and log keystrokes
-- **Ransomware**: Encryption tool with logging capabilities
 
 ## 🎉 Fun Actions
 
