@@ -59,25 +59,6 @@ The dashboard provides a comprehensive view of connected clients with the follow
 ### Tasks 📅
 The builder allows configuration of automated tasks that execute based on specific conditions when the client is launched. These tasks can be scheduled to run at specific times, on specific events, or based on system conditions.
 
-### Clipper
-The clipper functionality monitors the clipboard for cryptocurrency wallet addresses. When a user copies a cryptocurrency address, the clipper replaces it with an alternative address specified by the administrator, redirecting transactions to the specified wallet.
-
-## 💰 Cryptocurrency Tools
-
-### Miner Management ⛏️
-Displays a table with:
-- IP Address
-- Hardware Information
-- Mining Status
-- Connection Status
-
-### Clipper Management ✂️
-Similar interface to the miner management, showing:
-- IP Address
-- Target Cryptocurrencies
-- Active Status
-- Connection Status
-
 ## 👁️ Remote Viewing
 
 ### Screen Viewer 🖼️
@@ -144,47 +125,6 @@ Provides terminal access to the target system with full command execution capabi
 
 ### Browser Control 🌐
 - Open specified URLs in the target's web browser
-
-## 🔑 Credential Recovery
-
-### Applications 📦
-- **Wallets**: All cryptocurrency wallets including browser extensions
-- **Discord**: Account credentials
-- **FileZilla**: FTP credentials
-- **FoxMail**: Email credentials
-- **Ngrok**: Tunnel credentials
-- **OBS**: Streaming credentials
-- **Steam**: Gaming platform credentials
-- **Telegram**: Messaging credentials
-- **WinSCP**: Secure file transfer credentials
-
-### Browsers 🌍
-- All Chromium-based browsers
-- All Gecko-based browsers
-
-### Games 🎮
-- Epic Games
-- Minecraft
-- Riot Games
-- Uplay
-- Nations Glory
-
-### System Information 🖥️
-- Clipboard contents
-- Screenshot capture
-- System specifications (CPU, RAM, OS Version, GPU)
-- Windows Product Key
-- IP Address
-
-### VPN Services 🔒
-- NordVPN
-- OpenVPN
-- ProtonVPN
-
-### Injections 💉
-- Discord
-- Exodus
-- Metamask (Coming Soon)
 
 ## ⚙️ User Settings
 
